@@ -1,7 +1,12 @@
+using Microsoft.EntityFrameworkCore;
+using ForexApi.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Adicionado vs.001
+ConfigureServices(builder); 
 
+// Add services to the container.
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -14,6 +19,12 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
+}
+
+ // Adicionado vs.001
+void ConfigureServices(WebApplicationBuilder services)
+{
+    builder.Services.AddDbContext<Contexto>(opcoes => opcoes.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoBD")));
 }
 
 app.UseHttpsRedirection();

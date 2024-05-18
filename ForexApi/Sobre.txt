@@ -1,0 +1,22 @@
+(vs.001)
+
+    (comandos)
+        dotnet new webapi -o ForexApi
+        dotnet add package Microsoft.EntityFrameworkCore --version 7.0.19
+        dotnet remove package Microsoft.EntityFrameworkCore.SqlServer --version 7.0.19
+        dotnet add package Microsoft.EntityFrameworkCore.Design --version 7.0.19
+        dotnet new tool-manifest
+        dotnet tool install dotnet-ef --version 7.0.19
+        dotnet tool update --global dotnet-ef
+        dotnet ef migrations add initialCreation
+
+
+    1. Criado a pasta Models
+        Add Contexto.cs e Paridade.cs
+
+    2. Modificado Programa.cs e 
+                  appsettings.cs
+
+    3. Criado arquivo de manifest (.config)
+        dotnet new tool-manifest 
+        dotnet tool install dotnet-ef --version 7.0.19

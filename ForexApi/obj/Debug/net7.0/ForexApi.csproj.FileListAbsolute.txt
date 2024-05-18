@@ -69,3 +69,8 @@ C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\obj\Debug\net7.0
 C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\obj\Debug\net7.0\ForexApi.pdb
 C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\obj\Debug\net7.0\ForexApi.genruntimeconfig.cache
 C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\obj\Debug\net7.0\ref\ForexApi.dll
+C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\bin\Debug\net7.0\Humanizer.dll
+C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\SilvioArquivos\Balta.io\MeuBanco\ForexAngularWebApi\ForexApi\bin\Debug\net7.0\System.CodeDom.dll

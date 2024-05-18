@@ -20,3 +20,7 @@
     3. Criado arquivo de manifest (.config)
         dotnet new tool-manifest 
         dotnet tool install dotnet-ef --version 7.0.19
+
+(vs.002)
+    1. Add ParidadeController.cs
+        Criando o controller e sua ações

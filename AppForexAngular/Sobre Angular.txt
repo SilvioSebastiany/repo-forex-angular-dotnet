@@ -1,0 +1,16 @@
+-------------------------------------------------------
+Angular:
+
+    ng new AppAngular --no-standalone
+    npm add ngc-bootstrap
+
+
+Versão 003 
+    (comandos)
+        cd srs/app
+        ng g s Paridade  // g= genereite - s= service
+
+    1: Add os arquivos pessoas.service.spec.ts e pessoas.service.ts
+        comando ng g s Paridade
+
+    2. Modificado o arquivo app.module.ts

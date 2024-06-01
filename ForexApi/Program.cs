@@ -25,7 +25,13 @@ if (app.Environment.IsDevelopment())
 void ConfigureServices(WebApplicationBuilder services)
 {
     builder.Services.AddDbContext<Contexto>(opcoes => opcoes.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoBD")));
+
+    // vs 003
+    builder.Services.AddCors();
 }
+
+// vs 003
+app.UseCors(opcoes => opcoes.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
 
 app.UseHttpsRedirection();
 

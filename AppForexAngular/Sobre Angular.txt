@@ -6,11 +6,20 @@ Angular:
 
 
 Versão 003 
-    (comandos)
-        cd srs/app
-        ng g s Paridade  // g= genereite - s= service
+    -- git commit -m "criado o projeto Angular e alterado alguns arquivos, olhar o Sobre"
+        (comandos)
+            cd srs/app
+            ng g s Paridade  // g= genereite - s= service
 
-    1: Add os arquivos pessoas.service.spec.ts e pessoas.service.ts
-        comando ng g s Paridade
+        1: Add os arquivos paridades.service.spec.ts e paridades.service.ts
+            comando ng g s Paridade
 
-    2. Modificado o arquivo app.module.ts
+        2. Modificado o arquivo app.module.ts
+
+        3. Add os arquivo Paridade.ts
+
+    -- git commit -m ""
+
+        1: Modificado o arquivo paridade.service.ts
+            Configurado a parte presponsável por realizar operações CRUD (Create, Read, Update, Delete) em uma API REST
+            O serviço usa o HttpClient para fazer requisições HTTP à API

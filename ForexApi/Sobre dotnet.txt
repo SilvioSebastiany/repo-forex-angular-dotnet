@@ -26,3 +26,6 @@
         Criando o controller e sua ações
 
 (vs.003)
+
+    -- git commit -m ""
+        2. Modificado o arquivo program.cs

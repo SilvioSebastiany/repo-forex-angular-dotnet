@@ -18,8 +18,30 @@ Versão 003
 
         3. Add os arquivo Paridade.ts
 
-    -- git commit -m ""
+    -- git commit -m "vs 003, configurado a rota da api no Angular e dotnet-  olhar o sobre
 
         1: Modificado o arquivo paridade.service.ts
             Configurado a parte presponsável por realizar operações CRUD (Create, Read, Update, Delete) em uma API REST
             O serviço usa o HttpClient para fazer requisições HTTP à API
+
+(Versão 004)
+    -- git commit -m
+        (comandos)
+            ng g c Pessoas  // g= genereite - c= components
+
+        1: Criado a pasta Components
+
+        2: Add os arquivos abaixo dentro da pasta Components: 
+            pessoas.components.css
+            pessoas.components.html
+            pessoas.components.css
+            pessoas.components.spec.ts
+            pessoas.components.ts
+                comando ng g c Paridades
+
+        3. Midificado o arquivo app.component.html dentro da pasta app
+            Excluido tudo e deixado apenas 
+                <router-outlet></router-outlet>
+        
+        4. Midificado o arquivo app.routing.module.ts dentro da pasta app
+            Pra Inicializar o componente Paridades criado

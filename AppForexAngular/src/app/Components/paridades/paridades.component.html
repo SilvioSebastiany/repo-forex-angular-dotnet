@@ -4,20 +4,20 @@
             <h6>{{tituloFormulario}}</h6>
             <hr/>
 
-            <form [formGroup]="formulario">
+            <form [formGroup]="formulario" (ngSubmit)="EnviarFormulario()">
                 <div class="form-group">
                     <label>Moeda</label>
-                    <input type="text" class="form-control form-control-sm" formControlName="nome">
+                    <input type="text" class="form-control form-control-sm" formControlName="moeda">
                 </div>
 
                 <div class="form-group">
                     <label>Preço</label>
-                    <input type="text" class="form-control form-control-sm" formControlName="sobrenome">
+                    <input type="text" class="form-control form-control-sm" formControlName="preco">
                 </div>
 
                 <div class="form-group">
                     <label>Swap</label>
-                    <input type="number" class="form-control form-control-sm" formControlName="idade">
+                    <input type="text" class="form-control form-control-sm" formControlName="swap">
                 </div>
 
                 <div class="container">

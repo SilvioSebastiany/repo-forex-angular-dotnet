@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ParidadeService } from '../../paridade.service';
+import { Paridade } from '../../Paridade';
 
 @Component({
   selector: 'app-paridades',
@@ -8,17 +10,32 @@ import { FormControl } from '@angular/forms';
 })
 export class ParidadesComponent implements OnInit{
 
-  formulario: any;
-  tituloFormulario? :string;
+
+  formulario:FormGroup;
+  tituloFormulario:string = "";
+
+
+  constructor(private paridadeService : ParidadeService, private formBuilder: FormBuilder){
+    this.formulario = this.formBuilder.group({
+      moeda: [null, Validators.required],
+      preco: [null, Validators.required],
+      swap: [null, Validators.required]
+    });
+  }
 
   ngOnInit(): void {
     this.tituloFormulario = 'Nova Paridade';
-    this.formulario = new FormControl({
-      paridadeId: new FormControl(null),
-      moeda: new FormControl(null),
-      preco: new FormControl(null),
-      swap: new FormControl(null),
-    });
+  }
+
+  EnviarFormulario(): void {
+    if (this.formulario.valid) { 
+      const paridade: Paridade = this.formulario.value;
+      this.paridadeService.SalvarParidade(paridade).subscribe(resultado => {
+        alert('Paridade inserida com sucesso');
+      });
+    } else {
+      alert('Por favor, preencha todos os campos obrigatórios.');
+    }
   }
 
 }

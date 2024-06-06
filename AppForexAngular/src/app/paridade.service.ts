@@ -27,11 +27,11 @@ export class ParidadeService {
     return this.http.get<Paridade>(apiUrl);
   }
 
-  SalvarPessoa(paridade: Paridade) : Observable<any>{
+  SalvarParidade(paridade: Paridade) : Observable<any>{
     return this.http.post<Paridade>(this.url, paridade, httpOptions);
   }
 
-  AtualizarPessoa(paridade: Paridade) : Observable<any>{
+  AtualizarParidade(paridade: Paridade) : Observable<any>{
     return this.http.put<Paridade>(this.url, paridade, httpOptions)
   }
 

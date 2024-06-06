@@ -57,3 +57,13 @@ Aula 005
     3. modified:   AppAngular/src/index.html
         add o link do bootstrap
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+
+-------------------------------------------------------
+Aula 006
+    (comandos)
+
+    1. modified:   AppForexAngular/src/app/Components/paridades/paridades.component.html
+        ajustado para exibir o cadastro do formulario
+
+    2. modified:   AppForexAngular/src/app/Components/paridades/paridades.component.ts
+        Ajustado os métodos dos botões e da exibição do formulario de exibição e criação

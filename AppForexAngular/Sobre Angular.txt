@@ -67,3 +67,13 @@ Aula 006
 
     2. modified:   AppForexAngular/src/app/Components/paridades/paridades.component.ts
         Ajustado os métodos dos botões e da exibição do formulario de exibição e criação
+-------------------------------------------------------
+
+Aula 007
+    (comandos)
+
+    1. modified:   AppForexAngular/src/app/Components/paridades/paridades.component.html
+        ajustado para atualizar o cadastro
+
+    2. modified:   AppForexAngular/src/app/Components/paridades/paridades.component.ts
+        Ajustado os métodos dos botões para atualizar o cadastro

@@ -1,6 +1,6 @@
 export class Paridade {
-    paridadeId?: number;
-    moeda?: string;
-    preco?:string;
-    swap?: string;
+    paridadeId: number = 0;
+    moeda: string ="";
+    preco:string="";
+    swap: string="";
 }

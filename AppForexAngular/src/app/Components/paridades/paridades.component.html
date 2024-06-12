@@ -23,7 +23,7 @@
                 <td>{{paridade.swap}}</td>
                 <td>
                     <button type="button" class="btn btn-sm btn-outline-info" (click)="(ExibirFormularioAtualizacao(paridade.paridadeId))">Atualizar</button>
-                    <button type="button" class="btn btn-sm btn-outline-info">Excluir</button>
+                    <button type="button" class="btn btn-sm btn-outline-danger"(click)="ExibirConfirmacaoExclusao(paridade.paridadeId, paridade.moeda, conteudoModal)">Excluir</button>
                 </td>
             </tr>
         </table>
@@ -71,3 +71,20 @@
         </div>
     </div>
 </div>
+
+<ng-template #conteudoModal>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Confirmação de Exclusão</h4>
+      <button type="button" class="btn-close close pull-right" aria-label="Close" (click)="modalRef?.hide()">
+        <span aria-hidden="true" class="visually-hidden">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      Prosseguir com a exclusão do(a) {{moedaParidade}}
+    </div>
+  
+    <div class="modal-footer">
+      <button type="button" class="btn btn-light" (click)="modalRef?.hide()"> Não </button>
+      <button type="button" class="btn btn-outline-danger" data-dismiss="modal" (click)="ExcluirParidade(paridadeId)"> Sim </button>
+    </div>
+  </ng-template>

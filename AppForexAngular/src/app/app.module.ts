@@ -8,6 +8,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ParidadeService } from './paridade.service';
 import { ParidadesComponent } from './Components/paridades/paridades.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'; // Importação necessária
+import { ModalModule } from 'ngx-bootstrap/modal'; // Importação do ngx-bootstrap modal
 
 @NgModule({
   declarations: [
@@ -16,10 +18,12 @@ import { ParidadesComponent } from './Components/paridades/paridades.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule, // Adicione esta linha
     AppRoutingModule,
     CommonModule,         
     HttpClientModule,     
-    ReactiveFormsModule   
+    ReactiveFormsModule,
+    ModalModule.forRoot() // Certifique-se de configurar o ngx-bootstrap modal
   ],
   providers: [ParidadeService],
   bootstrap: [AppComponent]

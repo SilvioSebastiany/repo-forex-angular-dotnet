@@ -1,7 +1,9 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ParidadeService } from '../../paridade.service';
 import { Paridade } from '../../Paridade';
+import { BsModalRef, BsModalService } from 'ngx-bootstrap/modal';
+
 
 @Component({
   selector: 'app-paridades',
@@ -10,15 +12,19 @@ import { Paridade } from '../../Paridade';
 })
 export class ParidadesComponent implements OnInit{
 
-
   formulario:FormGroup;
-  tituloFormulario:string = "";
-  paridades: Paridade[] = [];
+
+  tituloFormulario?:string;
+  paridades?: Paridade[];
+  moedaParidade?: string ="";
+  paridadeId: number = 0;
 
   visibilidadeTabela:boolean = true;
   visibilidadeFormulario:boolean = false;
 
-  constructor(private paridadeService : ParidadeService, private formBuilder: FormBuilder){
+  modalRef?: BsModalRef;
+
+  constructor(private paridadeService : ParidadeService, private formBuilder: FormBuilder, private modalService: BsModalService){
     this.formulario = this.formBuilder.group({
       moeda: [null, Validators.required],
       preco: [null, Validators.required],
@@ -71,6 +77,10 @@ export class ParidadesComponent implements OnInit{
             this.visibilidadeTabela = true;
             this.visibilidadeFormulario = false;
             alert('Pessoa atualizada com sucesso');
+            this.paridadeService.PegarTodos().subscribe(registro => {
+              this.paridades = registro;
+            });
+
         });
       } 
       else {
@@ -90,4 +100,19 @@ export class ParidadesComponent implements OnInit{
     this.visibilidadeFormulario = false;
   }
 
+   ExibirConfirmacaoExclusao(paridadeId: number, moedaParidade: string, conteudoModal:TemplateRef<any>): void {
+     this.modalRef = this.modalService.show(conteudoModal);
+    this.paridadeId = paridadeId;
+    this.moedaParidade = moedaParidade;
+  }
+
+  ExcluirParidade(paridadeId: number){
+    this.paridadeService.ExcluitPeloId(paridadeId).subscribe(resultado => {
+      this.modalRef?.hide();
+      alert("Paridade excluída com sucesso");
+      this.paridadeService.PegarTodos().subscribe(registro => {
+        this.paridades = registro;
+      });
+    }) 
+  }
 }

@@ -39,6 +39,7 @@ public class ParidadesController : ControllerBase
         await _contexto.SaveChangesAsync();
 
         return Ok();
+        return Ok();
     }
 
     [HttpPut]
@@ -47,6 +48,7 @@ public class ParidadesController : ControllerBase
         _contexto.Paridades.Update(paridade);
         await _contexto.SaveChangesAsync();
         
+        return Ok();
         return Ok();
     }
 

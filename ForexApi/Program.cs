@@ -20,7 +20,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
+// tesste
  // Adicionado vs.001
 void ConfigureServices(WebApplicationBuilder services)
 {
